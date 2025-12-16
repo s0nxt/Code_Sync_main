@@ -60,5 +60,8 @@
         "ts-node": "^10.9.2",
         "typescript": "^5.4.5",
         "vite": "^6.2.2"
+    },
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "^4.35.0"
     }
 }
