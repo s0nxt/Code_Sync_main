@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from "axios"
 
-const pollinationsBaseUrl = "https://text.pollinations.ai"
+const pollinationsBaseUrl = "https://gen.pollinations.ai/v1"
 
 const instance: AxiosInstance = axios.create({
     baseURL: pollinationsBaseUrl,

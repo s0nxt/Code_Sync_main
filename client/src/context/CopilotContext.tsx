@@ -30,7 +30,7 @@ const CopilotContextProvider = ({ children }: { children: ReactNode }) => {
 
             toast.loading("Generating code...")
             setIsRunning(true)
-            const response = await axiosInstance.post("/", {
+            const response = await axiosInstance.post("/chat/completions", {
                 messages: [
                     {
                         role: "system",
@@ -43,11 +43,10 @@ const CopilotContextProvider = ({ children }: { children: ReactNode }) => {
                     },
                 ],
                 model: "mistral",
-                private: true,
             })
-            if (response.data) {
+            if (response.data?.choices?.[0]?.message?.content) {
                 toast.success("Code generated successfully")
-                const code = response.data
+                const code = response.data.choices[0].message.content
                 if (code) setOutput(code)
             }
             setIsRunning(false)
