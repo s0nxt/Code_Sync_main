@@ -1,7 +1,5 @@
 import illustration from "@/assets/illustration.svg"
 import FormComponent from "@/components/forms/FormComponent"
-// import Footer from "@/components/common/Footer";
-
 function HomePage() {
     return (
         <div className="flex min-h-screen flex-col items-center justify-center gap-16">
@@ -17,7 +15,6 @@ function HomePage() {
                     <FormComponent />
                 </div>
             </div>
-            {/* <Footer /> */}
         </div>
     )
 }
